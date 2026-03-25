@@ -7,6 +7,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/Dotnet.gitignore
 
+# Private files
+generate-schema.ps1
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/
