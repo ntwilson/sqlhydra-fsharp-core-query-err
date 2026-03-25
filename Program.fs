@@ -20,7 +20,7 @@ let sharedSqlite db =
     let compiler = SqlKata.Compilers.SqliteCompiler()
     ContextType.Shared(new QueryContext(db, compiler)) // For more information see https://aka.ms/fsharp-console-apps
 
-let insertThenRetrieveDateTime =
+let queryWithJoin =
     async {
         use! db = openSqlite
 
@@ -51,6 +51,6 @@ let insertThenRetrieveDateTime =
 let main argv =
     Async.RunSynchronously
     <| async {
-        do! insertThenRetrieveDateTime
+        do! queryWithJoin
         return 0
     }
